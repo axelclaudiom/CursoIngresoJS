@@ -7,3 +7,4 @@ function mostrar()
 	alert("Su nombre es: " + msj);
 }
 
+// se puede usar como salida console.log // document.write
