@@ -6,8 +6,10 @@ mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
 {	
-	let n1 = parseInt(txtIdNumeroUno.value);
-	let n2 = parseInt(txtIdNumeroDos.value);
+	let n1 = txtIdNumeroUno.value;
+	let n2 = txtIdNumeroDos.value;
+	n1 = parseInt(n1);
+	n2 = parseInt(n2);
 	let total = n1 + n2;
 	alert("La suma es: " + total);
 }
