@@ -1,6 +1,12 @@
+/* Melgar Claudio Axel Div H
+Ejercicios If 05*/
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
-
-}//FIN DE LA FUNCIÓN
+	let edad;
+	edad = txtIdEdad.value;
+	edad = parseInt(edad);
+	if(edad<=17)
+	{
+		alert("La persona es menor");
+	}
+}
