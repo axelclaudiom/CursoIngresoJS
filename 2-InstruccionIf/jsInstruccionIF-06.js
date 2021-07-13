@@ -9,12 +9,12 @@ function mostrar()
 	{
 		alert("La persona es mayor de edad");
 	}
-	else if(edad >= 13 && edad<=17)
+	else if(edad >= 13 && edad<=17) //corregir
 	{
 		alert("La persona es adolecente");
 	}
-	else if(edad<=13)
+	else if(edad<=13) //corregir
 	{
 		alert("La persona es menor");
-	}
-}//FIN DE LA FUNCIÓN
+	} 
+}// oka FIN DE LA FUNCIÓN  no tengo micc lo mismo que juana en esta notebook justo, en la otra si nono juana si jaja uso dos pcs
