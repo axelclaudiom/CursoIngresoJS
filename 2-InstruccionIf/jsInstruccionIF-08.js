@@ -3,11 +3,11 @@ Ejercicios If 08*/
 function mostrar()
 {
 	let edad;
-	let ecivil;
+	let estadoCivilIngresado;
 	edad = txtIdEdad.value;
 	edad = parseInt(edad);
 	ecivil = estadoCivil.value;
-	if(edad>=18 && ecivil == "Soltero")
+	if(edad>=18 && estadoCivilIngresado == "Soltero")
 	{
 		alert("Es soltero y no es menor.");
 	}

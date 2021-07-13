@@ -7,7 +7,7 @@ function mostrar()
 	edad = txtIdEdad.value;
 	edad = parseInt(edad);
 	ecivil = estadoCivil.value;
-	if(edad<=17 && ecivil != "Soltero")
+	if(edad<=18 && ecivil != "Soltero")
 	{
 		alert("Es muy pequeño para NO ser soltero.");
 	}
