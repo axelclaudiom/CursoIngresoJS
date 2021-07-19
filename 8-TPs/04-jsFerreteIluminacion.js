@@ -14,49 +14,76 @@ function CalcularPrecio ()
     let descuentoPorcentaje;
     let marca;
     let importeFinal;
+    let descuentoAdquirido; //la funcion de esta variable es banear para que no pueda adquirir mas de un descuento.
     cantidadLamparas = txtIdCantidad.value;
     cantidadLamparas = parseInt(cantidadLamparas);
     precioLampara = "35";
+    descuentoAdquirido = "0";
     marca = Marca.value;
-    //console.log("Se);
     // A.	Si compra 6 o más  lamparitas bajo consumo tiene un descuento del 50%. 
     if (cantidadLamparas > "5")
     {
         descuentoPorcentaje = "50";
+        console.log("condicion 1");
+        descuentoAdquirido = "1";
     }
 
     //B.	Si compra 5  lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 % y si es de otra marca el descuento es del 30%.
-    if(cantidadLamparas > 4 && marca == "ArgentinaLuz")
+    if(cantidadLamparas > 4 && marca == "ArgentinaLuz" && descuentoAdquirido == 0)
     {
         descuentoPorcentaje = "40";
+        console.log("condicion 2");
+        descuentoAdquirido = "1";
     }
     else
     {
-        descuentoPorcentaje = "30";
+        if (cantidadLamparas > 4 && descuentoAdquirido == 0)
+        {
+            descuentoPorcentaje = "30";
+            console.log("condicion 3");
+            descuentoAdquirido = "1";
+        }
     }
 //    C.	Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” se hace un descuento del 25 % y si es de otra marca el descuento es del 20%.
-    if(cantidadLamparas > 3 && marca == "ArgentinaLuz"  || marca == "FelipeLamparas")
+    if(cantidadLamparas > 3 && descuentoAdquirido == 0 && marca == "ArgentinaLuz"  || cantidadLamparas > 3 && descuentoAdquirido == 0 && marca == "FelipeLamparas")
     {
         descuentoPorcentaje = "25";
+        console.log("condicion 4");
+        descuentoAdquirido = "1";
     }
     else
     {
-        descuentoPorcentaje = "20";
+        if(cantidadLamparas > 3 && descuentoAdquirido == 0)
+        {
+            descuentoPorcentaje = "20";
+            console.log("condicion 5");
+            descuentoAdquirido = "1";
+        }
     }
 //    D.	Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es del 15%, si es  “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%.
-    if(cantidadLamparas > 2 && marca == "ArgentinaLuz")
+    if(cantidadLamparas > 2 && marca == "ArgentinaLuz" && descuentoAdquirido == 0)
     {
         descuentoPorcentaje = "15";
+        console.log("condicion 6");
+        descuentoAdquirido = "1";
     }
     else
     {
-        if(marca == "FelipeLamparas")
+        if(cantidadLamparas > 2 && marca == "FelipeLamparas" && descuentoAdquirido == 0)
         {
             descuentoPorcentaje = "10";
+            console.log("condicion 7");
+            descuentoAdquirido = "1";
         }
         else
         {
-            descuentoPorcentaje = "5";
+            if(cantidadLamparas > 2 && descuentoAdquirido == 0)
+            {
+                descuentoPorcentaje = "5";
+                console.log("condicion 8");
+                descuentoAdquirido = "1";
+            }
+            
         }
     }
     importeSinDesc = precioLampara * cantidadLamparas;
