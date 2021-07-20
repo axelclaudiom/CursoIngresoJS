@@ -1,4 +1,5 @@
-/*
+/* Melgar Claudio Axel Div H
+while 3
 al presionar el botón pedir la CLAVE (ayuda: es utn750)*/
 function mostrar()
 {

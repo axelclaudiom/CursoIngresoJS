@@ -1,4 +1,5 @@
-/*
+/* Melgar Claudio Axel Div H
+While 4
 al presionar el botón 
 pedir un número entre 0 y 9 inclusive.*/
 function mostrar()
