@@ -1,5 +1,5 @@
 /* Melgar Claudio Axel Div H
-While 10
+While 10 biz
 Al presionar el botón pedir  números  
 hasta que el usuario quiera, mostrar:
 1-Suma de los negativos. x
@@ -25,6 +25,9 @@ function mostrar()
 	var promedioPositivos;
 	var promedioNegativos;
 	var diferenciaPosNeg;
+	var ingresoPrimerNumero;
+	var numeroMaximo;
+	var numeroMinimo;
 	cantidadPositivos = 0;
 	sumaPositivos= 0;
 	sumaNegativos=0;
@@ -32,15 +35,28 @@ function mostrar()
 	cantidadCeros=0;
 	cantidadPares = 0;
 	respuesta=true;
+	ingresoPrimerNumero=false;
 
 	while(respuesta==true)
 	{
 		numeroIngresado = prompt("ingrese un numero:");
 		numeroIngresado = parseInt(numeroIngresado);
+		if(numeroIngresado > numeroMaximo || ingresoPrimerNumero == false)
+		{
+			numeroMaximo = numeroIngresado;
+			console.log("Ingreso numero maximo");
+		}
+		if(numeroIngresado < numeroMinimo || ingresoPrimerNumero == false)
+		{
+			numeroMinimo = numeroIngresado;
+			console.log("Ingreso numero minimo");
+			ingresoPrimerNumero = true;
+		}
 		if(numeroIngresado > 0)
 		{
 			sumaPositivos += numeroIngresado;
 			cantidadPositivos += 1;
+			console.log("Ingreso un numero positivo");
 		}
 		else
 		{
@@ -87,6 +103,8 @@ function mostrar()
 		document.write("No se pudo calcular el promedio de positivos <br>");
 	}
 	diferenciaPosNeg = sumaPositivos - sumaNegativos;
-	document.write("La diferencia entre positivos y negativos es: " + diferenciaPosNeg);
+	document.write("La diferencia entre positivos y negativos es: " + diferenciaPosNeg + "<br>");
+	document.write("El numero minimo ingresado es: " + numeroMinimo + "<br>");
+	document.write("El numero maximo ingresado es: " + numeroMaximo + "<br>");
 
 }//FIN DE LA FUNCIÓN
