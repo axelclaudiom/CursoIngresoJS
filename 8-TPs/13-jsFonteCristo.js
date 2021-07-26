@@ -1,4 +1,6 @@
-/*El departamento de NUMEROS ESPECIALES  del instituto matemático  FonteCristo  nos está pidiendo una aplicación que verifique las distintas cualidades de los números.
+/* Melgar Claudio Axel div H
+tp 13 (este lo pari)
+El departamento de NUMEROS ESPECIALES  del instituto matemático  FonteCristo  nos está pidiendo una aplicación que verifique las distintas cualidades de los números.
 
 13.	Para cada una de estas acciones  debemos realizar la lógica para verificar las cualidades pedidas:
 a.	Se pedirán un número positivo y se mostrará la cantidad de números pares desde el número ingresado hasta el cero.
@@ -14,6 +16,12 @@ function NumerosPares()
  	numeroIngresado = txtIdNumero.value;
     numeroIngresado = parseInt(numeroIngresado);
     numerosPar = 0;
+    while(numeroIngresado < 0)
+    {
+        numeroIngresado = prompt("Error. Ingrese un numero positivo");
+        numeroIngresado = parseInt(numeroIngresado);
+        console.log(numeroIngresado);
+    }    
     while (numeroIngresado > 0)
     {
         if(numeroIngresado % 2 == 0)
@@ -32,6 +40,12 @@ function NumerosImpares()
  	numeroIngresado = txtIdNumero.value;
     numeroIngresado = parseInt(numeroIngresado);
     numerosInpar = 0;
+    while(numeroIngresado < 0)
+    {
+        numeroIngresado = prompt("Error. Ingrese un numero positivo");
+        numeroIngresado = parseInt(numeroIngresado);
+        console.log(numeroIngresado);
+    }
     while (numeroIngresado > 0)
     {
         if(numeroIngresado % 2 != 0)
@@ -153,15 +167,18 @@ function NumerosPrimos()
         }
         if(numeroPrimo == 1)
         {
-            document.write(numeroIngresado +"Es un numero primo <br>");
+            console.log(numeroIngresado +"Es un numero primo");
+            cantidadPrimo += 1;
+            //document.write(numeroIngresado +"Es un numero primo <br>");
         }
         else
         {
-            document.write(numeroIngresado +"no es un numero primo <br>");
+            console.log(numeroIngresado +"no es un numero primo");
+            //document.write(numeroIngresado +"no es un numero primo <br>");
         }
         numeroIngresado +=-1;
         console.log("sale del bucle ")
     }
-    document.write("cantidad primo: " + cantidadPrimo + "<br>");
+    document.write("Cantidad de numeros primos: " + cantidadPrimo + "<br>");
 
 }
